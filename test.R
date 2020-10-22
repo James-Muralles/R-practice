@@ -71,6 +71,16 @@ if(n>=2){
 }}
 Primvec(15)
 
+Evens = function(n) {
+  if (n%%2 == 0){
+  return (TRUE)
+  }else{
+   paste("this answer is: ", (FALSE), sep="")
+  }
+}
+
+Evens(13)
+
 head(airmiles)
 summary(airmiles)
  plot(mtcars)
@@ -83,7 +93,7 @@ detach(mtcars)
 sum(wt)
 mtcars[Primvec(10),6]
 
-view(mtcars)
+View(mtcars)
 
 hi = `afspec.pt.testjimmy.template.(1)`
 heck = "afspec pt testjimmy template (1).csv"
@@ -99,7 +109,7 @@ characters
  
  mydata = fread(heck)
 
- view(mydata) 
+ View(mydata) 
 
  df = fread("1	 China[b]	1,404,963,200	18.0%	21 Oct 2020	National population clock[3]
 2	 India[c]	1,368,669,326	17.5%	21 Oct 2020	National population clock[4]
@@ -120,3 +130,25 @@ Rank","Country
 
 
 View(df)
+
+x = 5:7
+x
+y = 8:10
+plot(x,y)
+
+plot(lynx)
+
+plot(lynx, main="Lynx Trappings", col="red", col.main=52, cex.main=1.5)
+
+plot(lynx, ylab="Lynx Trappings", xlab="", las=2)
+
+par(mfrow=c(2,2), col.axis="red")
+
+plot(1:8, las=0, ylab="ylabs", xlab="xlab", main="LAS = 0")
+plot(1:8, las=1, ylab="ylabs", xlab="xlab", main="LAS = 1")
+plot(1:8, las=2, ylab="ylabs", xlab="xlab", main="LAS = 2")
+plot(1:8, las=3, ylab="ylabs", xlab="xlab", main="LAS = 3")
+
+
+
+
