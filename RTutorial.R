@@ -1,6 +1,6 @@
 # R uses vector operations so you do not have to loop though tables of data.
 
-# VARIABLE ASSIGNMENT 
+# VARIABLE ASSIGNMENT #######################
 # You can use two ways to assign variables
 
 a = 1 + 2
@@ -37,18 +37,56 @@ View(df) # to view data frame
 
 # Matrix data type
 
-mymatrix <- matrix(vec3, 2)
+mymatrix <- matrix(vec3, 3, 2)
 colnames(mymatrix)
 
-# Indexing
+# INDEXING ########################
 
 vec2[2] # shows position 2 of the vector
 
+# naming vectors in a list
+
+mylist <- list("a" = vec1, "vec2" = vec2,namewithoutquotes = vec3,  mynumber = 20, list(vec1,vec2,vec3), mean)
+
+# use [:] to see vectors 1-4
+mylist[1:4]
+
+# filtering list
+mylist$namewithoutquotes
+# same as this
+mylist[[3]]
+
+# You can also filter a dataframe the same way
+df$a
+df[[1]]
+df[[1]][4] # vector 1 at element 4
+df$a[4] # vector 1 at element 4
+df$a[1:2] # shows the 1st through 2nd element
+
+
+df[1,2] # gives first row second column --> TRUE
+df[1,] # all values on the first row --> 1, TRUE
+df[c(1,3,4),] # values from these row. give an index of vectors 
+# df[,2] === df$b
+
+# for matrix
+mymatrix[2,]
+
+# FUNCTIONS ################################
+
+new_division <- function(value1 , value2) {
+  results <- value1 / value2
+  return(results)
+}
+
+new_division(10,20) # returns 0.5
+new_division(value2 = 10, value1 = 20) # returns 2
 
 
 
 
-# STATISITCAL PROGRAMMING
+
+# STATISITCAL PROGRAMMING ####################
 
 library(datasets)
 
