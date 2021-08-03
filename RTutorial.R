@@ -159,6 +159,31 @@ plot(dnorm, -3, +3,
 
 detach("package:datasets", unload = TRUE) 
 
-# Bar Charts
+# Bar Charts ##############################################
+
+head(pm)
+
+barplot(pm$Legendary)                 # doesn't work
+
+# Need a table with a frequencies for each category
+
+HP <- table(pm$HP[140:150])                    # create table
+Type <- table(pm$`Type 1`)  
+barplot(HP)                           # Bar chart
+barplot(Type)
+plot(HP)                              # Default X-Y plot (lines)
+
+# BASIC HISTORGRAMS ######################################
+
+hist(pm$Attack[pm$`Type 1` == 'Fire'],
+     main = "Fire Poke'Mon Attack Frequency",
+     xlab = "Attack",
+     ylab = "Freq")
+
+
+
+
+
+
 
 
