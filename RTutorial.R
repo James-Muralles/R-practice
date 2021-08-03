@@ -180,6 +180,64 @@ hist(pm$Attack[pm$`Type 1` == 'Fire'],
      xlab = "Attack",
      ylab = "Freq")
 
+# HISTOGRAM BY GROUP ####################################
+
+# put graphs in 3 rows and 1 column
+
+par(mfrow = c(3,1)) # allows you to see 3 charts at the same the time
+
+hist(pm$Attack[pm$`Type 1` == 'Psychic'],
+    
+     xlim = c(140,200),
+     breaks = 9,
+     main = "Pyschic Poke Mon Attacks",
+     xlab = "",
+     col = "purple"
+     
+     )
+
+hist(pm$Attack[pm$`Type 1` == 'Fire'],
+     
+     xlim = c(140,200),
+     breaks = 9,
+     main = "Fire Poke Mon Attacks",
+     xlab = "",
+     col = "red"
+     
+)
+
+hist(pm$Attack[pm$`Type 1` == 'Bug'],
+     
+     xlim = c(140,200),
+     breaks = 9,
+     main = "Bug Poke Mon Attacks",
+     xlab = "",
+     col = "green"
+     
+)
+
+# SCATTER PLOTS ############################
+
+hist(pm$`Sp. Atk`)
+hist(pm$`Defense`)
+
+# Basic x-y plot for two quantitative variables
+
+plot(pm$`Sp. Atk`, pm$Attack,
+     pch = 19, # solid circle
+     cex = 1.5, #make size 150%
+     col = "#cc0000", #red
+     main = "Attack VS Special Attack",
+     xlab = "Special Attack",
+     ylab = "Attack"
+     
+     )
+
+
+
+
+
+
 
 
 
