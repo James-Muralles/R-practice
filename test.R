@@ -79,7 +79,7 @@ Evens = function(n) {
   }
 }
 
-Evens(13)
+Evens(12)
 
 head(airmiles)
 summary(airmiles)
